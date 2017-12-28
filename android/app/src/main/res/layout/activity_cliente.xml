@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.luis.tiendacontrol.mantenimiento.ClienteActivity">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabActMarNuevo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:clickable="true"
+        android:onClick="clickButtonCliente"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_input_add"
+        tools:layout_editor_absoluteX="355dp"
+        tools:layout_editor_absoluteY="547dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/amarilloSuave">
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/radioGrup"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbActClieCliente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cliente"
+                    android:onClick="onRadioClienteProveedor"
+                    android:textColor="@color/black"
+                    android:textSize="25sp" />
+
+                <RadioButton
+                    android:id="@+id/rbActClieProveedor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Proveedor"
+                    android:onClick="onRadioClienteProveedor"
+                    android:textColor="@color/black"
+                    android:textSize="25sp" />
+
+            </RadioGroup>
+        </LinearLayout>
+        <ListView
+            android:id="@+id/gvActCliente"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp"
+            android:divider="@color/verdeBajoFuerte"
+            android:dividerHeight="0.4dp"
+            android:listSelector="@color/amarilloSuave"
+            android:numColumns="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.luis.tiendacontrol">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <protected-broadcast android:name="android.intent.action.MEDIA_MOUNTED" />
+    <protected-broadcast android:name="android.intent.action.MEDIA_MOUNTED" />
+
+    <!-- android:roundIcon="@mipmap/ic_store" -->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_store"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_store"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".PrincipalActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".ParametrosActivity" />
+        <activity android:name=".MenuActivity" />
+        <activity android:name=".mantenimiento.MarcaActivity" />
+        <activity android:name=".mantenimiento.TipoActivity" />
+        <activity android:name=".mantenimiento.ProductoActivity" />
+        <activity android:name=".mantenimiento.ClienteActivity" />
+        <activity android:name=".mantenimiento.MovimientosActivity" />
+        <activity android:name=".mantenimiento.MovimientosRealizadosActivity" />
+        <activity android:name=".mantenimiento.ClienteDetalleActivity" />
+        <activity android:name=".mantenimiento.MarcaDetalleActivity" />
+        <activity android:name=".mantenimiento.ProductoDetalleActivity" />
+        <activity android:name=".mantenimiento.TipoDetalleActivity" />
+        <activity android:name=".mantenimiento.TipoMovimientoActivity" />
+        <activity android:name=".mantenimiento.TipoMovimientoDetalleActivity" />
+        <activity android:name=".seleccionLista.MarcaSelectActivity" />
+        <activity android:name=".seleccionLista.TipoSelectActivity" />
+        <activity android:name=".mantenimiento.ProductoInventarioActivity" />
+        <activity android:name=".mantenimiento.ProductoInventarioDetalleActivity" />
+        <activity android:name=".mantenimiento.ProductoInventarioRegistroActivity" />
+        <activity android:name=".seleccionLista.ClienteSelectActivity" />
+        <activity android:name=".seleccionLista.TipoMovimientoSelectActivity" />
+        <activity android:name=".mantenimiento.MovimientosRealizadosDetalleActivity" />
+        <activity android:name=".mantenimiento.ClienteMovimientoDetalleActivity" />
+        <activity android:name=".mantenimiento.ProductoMovimientoDetalleActivity"></activity>
+    </application>
+
+</manifest>

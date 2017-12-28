@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.luis.tiendacontrol.mantenimiento.ProductoInventarioActivity">
+
+    <LinearLayout
+        android:id="@+id/llCabecera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/rojoFuerte"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/amarilloSuave">
+
+            <TextView
+                android:id="@+id/tvActProdMovMarca"
+                style="@style/botonGeneralSinMargen"
+                android:text="Marca :TODOS"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="25sp"
+                android:clickable="true"
+                android:onClick="clickProductoInventarioMarca"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/amarilloSuave">
+
+            <TextView
+                android:id="@+id/tvActProdMovTipo"
+                style="@style/botonGeneralSinMargen"
+                android:text="Tipo :TODOS"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="25sp"
+                android:clickable="true"
+                android:onClick="clickProductoInventarioTipo"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <ListView
+        android:id="@+id/gvActProdMovProductoInventario"
+        android:layout_width="match_parent"
+        android:layout_height="818dp"
+        android:layout_marginTop="1dp"
+        android:numColumns="1"
+        android:divider="@color/verdeBajoFuerte"
+        android:dividerHeight="0.4dp"
+        android:listSelector="@color/amarilloSuave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llCabecera" />
+
+</LinearLayout>

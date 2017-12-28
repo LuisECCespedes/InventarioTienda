@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.luis.tiendacontrol.mantenimiento.ProductoInventarioRegistroActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/llActMarEdit"
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    style="@style/botonGeneralSinMargen"
+                    android:id="@+id/btActProInvRegAgregar"
+                    android:text="Registrar"
+                    android:background="@color/verdeBajoSuave"
+                    android:textSize="25sp"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/botonGeneralSinMargen"
+                    android:id="@+id/btActProInvRegCancelar"
+                    android:text="Cancelar"
+                    android:background="@color/rojoSuave"
+                    android:textSize="25sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Producto :"
+                        android:textSize="25sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvActProInvRegNombreProducto"
+                        android:textColor="@color/black"
+                        android:hint="Nombre"
+                        android:textSize="25sp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="     Precio :"
+                        android:textSize="25sp"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:id="@+id/etActProInvRegPrecio"
+                        android:textColor="@color/black"
+                        android:text="25.00"
+                        android:textSize="25sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginBottom="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Cantidad :"
+                        android:textSize="25sp"/>
+
+                    <Button
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="-6dp"
+                        android:textSize="25dp"
+                        android:textColor="@color/black"
+                        style="@style/botonGeneralSinMargen"
+                        android:id="@+id/btActProInvRegMenos"
+                        android:onClick="ClickMasMenos"
+                        android:text="-"
+                        />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/etActProInvRegCantidad"
+                        android:textColor="@color/black"
+                        android:inputType="number"
+                        android:text="1"
+                        android:textSize="25sp"/>
+                    <Button
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent"
+                        android:textSize="25dp"
+                        android:textColor="@color/black"
+                        style="@style/botonGeneralSinMargen"
+                        android:id="@+id/btActProInvRegMas"
+                        android:onClick="ClickMasMenos"
+                        android:text="+"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/btActProInvRegMovimiento"
+                        style="@style/botonGeneralSinMargen"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="25sp"
+                        android:text="Movimiento"
+                        />
+                    <TextView
+                        android:id="@+id/tvActProInvRegMovimiento"
+                        android:layout_width="match_parent"
+                        android:layout_height="65sp"
+                        android:textColor="@color/black"
+                        android:enabled="false"
+                        android:hint="Movimiento"
+                        android:background="@color/amverSuave"
+                        android:textSize="25sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/btActProInvRegClienteProveedor"
+                        style="@style/botonGeneralSinMargen"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="25sp"
+                        android:text="Cliente/Proveedor"/>
+                    <TextView
+                        android:id="@+id/tvActProInvRegClienteProveedor"
+                        android:layout_width="match_parent"
+                        android:layout_height="65sp"
+                        android:hint="Proveedor"
+                        android:textColor="@color/black"
+                        android:enabled="false"
+                        android:background="@color/amverSuave"
+                        android:textSize="25sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:id="@+id/etActProInvRegObservacion"
+                        android:textColor="@color/black"
+                        android:hint="Observacion"
+                        android:background="@color/amverSuave"
+                        android:textSize="25sp"
+                        android:gravity="start" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

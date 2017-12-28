@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.luis.tiendacontrol.seleccionLista.ClienteSelectActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:background="@color/amarilloSuave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/radioGrup"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton android:id="@+id/rbActCliClienteSel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cliente"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:onClick="onRadioClienteProveedorSelect"
+                    />
+
+                <RadioButton android:id="@+id/rbActCliProveedorSel"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/proveedor"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:onClick="onRadioClienteProveedorSelect"
+                    />
+
+            </RadioGroup>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/gvActCliSelect"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:numColumns="1"
+                android:divider="@color/verdeBajoFuerte"
+                android:dividerHeight="0.4dp"
+                android:listSelector="@color/amarilloSuave"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

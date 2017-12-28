@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="com.example.luis.tiendacontrol.mantenimiento.MovimientosRealizadosActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@color/amarilloSuave"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+                    <Button
+                        android:background="@color/amarilloMedio"
+                        android:id="@+id/btActMovReaFecDesde"
+                        android:text="2017-08-11"
+                        android:textSize="25sp"
+                        style="@style/botonGeneralSinMargen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/amarilloMedio"
+                        android:id="@+id/btActMovReaFecHasta"
+                        android:text="2017-08-11"
+                        android:textSize="25sp"
+                        style="@style/botonGeneralSinMargen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvActMovReaProducto"
+                        style="@style/botonGeneralSinMargen"
+                        android:text="Producto"
+                        android:textColor="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:textSize="25sp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/gvActMovReaLista"
+            android:layout_width="match_parent"
+            android:layout_height="806dp"
+            android:layout_marginTop="1dp"
+            android:numColumns="1"
+            android:divider="@color/verdeBajoFuerte"
+            android:dividerHeight="0.4dp"
+            android:listSelector="@color/amarilloSuave"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+    </LinearLayout>
+</LinearLayout>

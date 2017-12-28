@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF4081</color>
+    <color name="colorPrimaryDark">#FF4081</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="black1">#000000</color>
+    <color name="divider">#8c9e9e9e</color>
+    <color name="light_text">#ACAAA8</color>
+
+    <color name="colorPrimary_new">#00796B</color>
+    <color name="colorPrimaryDark_new">#26A69A</color>
+    <color name="colorAccent_new">#ef5350</color>
+
+    <color name="negro_semitransparente">#B2000000</color>
+    <color name="blanco">#fafafa</color>
+
+    <color name="ColorVerde">#aed581</color>
+
+    <color name="rojoSuave">#ef9a9a</color>
+    <color name="rosadoSuave">#f48fb1 </color>
+    <color name="moradoSuave"> #ce93d8</color>
+    <color name="moradoBajoSuave"> #b39ddb</color>
+    <color name="indigoSuave"> #9fa8da</color>
+    <color name="azulSuave">#90caf9 </color>
+    <color name="celesteSuave">#81d4fa </color>
+    <color name="cyanSuave">#80deea </color>
+    <color name="tealSuave">#80cbc4 </color>
+    <color name="verdeSuave">#a5d6a7 </color>
+    <color name="verdeBajoSuave">#c5e1a5 </color>
+    <color name="limeSuave">#e6ee9c </color>
+    <color name="amarilloSuave">#fff59d </color>
+    <color name="amverSuave">#ffe082 </color>
+    <color name="naranjaBajoSuave">#ffcc80 </color>
+    <color name="naranjaSuave">#ffab91 </color>
+    <color name="marronSuave">#bcaaa4 </color>
+    <color name="grisSuave">#eeeeee </color>
+    <color name="grisAzulSuave">#b0bec5</color>
+
+    <color name="rojoMedio">#f44336</color>
+    <color name="rosadoMedio">#e91e63 </color>
+    <color name="moradoMedio">#9c27b0 </color>
+    <color name="moradoBajoMedio">#9c27b0 </color>
+    <color name="indigoMedio">#3f51b5 </color>
+    <color name="azulMedio">#3f51b5 </color>
+    <color name="celesteMedio">#3f51b5 </color>
+    <color name="cyanMedio">#3f51b5 </color>
+    <color name="tealMedio">#3f51b5 </color>
+    <color name="verdeMedio">#3f51b5 </color>
+    <color name="verdeBajoMedio">#3f51b5 </color>
+    <color name="limeMedio">#cddc39 </color>
+    <color name="amarilloMedio">#ffeb3b </color>
+    <color name="amverMedio">#ffc107 </color>
+    <color name="naranjaBajoMedio">#ff9800 </color>
+    <color name="naranjaMedio">#ff5722 </color>
+    <color name="marronMedio">#795548 </color>
+    <color name="grisMedio">#9e9e9e </color>
+    <color name="grisAzulMedio">#607d8b </color>
+
+    <color name="rojoFuerte">#c62828</color>
+    <color name="rosadoFuerte">#ad1457 </color>
+    <color name="moradoFuerte"> #6a1b9a</color>
+    <color name="moradoBajoFuerte">#4527a0 </color>
+    <color name="indigoFuerte">#283593 </color>
+    <color name="azulFuerte">#1565c0 </color>
+    <color name="celesteFuerte">#0277bd </color>
+    <color name="cyanFuerte">#00838f </color>
+    <color name="tealFuerte">#00695c </color>
+    <color name="verdeFuerte"> #2e7d32</color>
+    <color name="verdeBajoFuerte">#558b2f </color>
+    <color name="limeFuerte">#9e9d24 </color>
+    <color name="amarilloFuerte">#f9a825 </color>
+    <color name="amverFuerte">#ff8f00 </color>
+    <color name="naranjaBajoFuerte">#ef6c00 </color>
+    <color name="naranjaFuerte">#d84315 </color>
+    <color name="marronFuerte">#4e342e </color>
+    <color name="grisFuerte">#424242 </color>
+    <color name="grisAzulFuerte">#37474f </color>
+
+</resources>
+

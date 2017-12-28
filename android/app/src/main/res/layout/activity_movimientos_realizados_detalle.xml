@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.luis.tiendacontrol.mantenimiento.MovimientosRealizadosDetalleActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/llActMarEdit"
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/botonGeneralSinMargen"
+                    android:id="@+id/btActMovReaDetCancelar"
+                    android:text="Regresar"
+                    android:background="@color/rojoSuave"
+                    android:onClick="ClickMovimientosRealizadosDetalleCancelar"
+                    android:textSize="25sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Producto :"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"/>
+                    <TextView
+                        android:id="@+id/tvActMovReaDetProducto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Aretes"
+                        android:textColor="@color/black"
+                        android:onClick="ClickMovimientosRealizadosDetalleProducto"
+                        android:clickable="true"
+                        android:textSize="25sp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Fecha : "
+                        android:textSize="25sp"/>
+                    <TextView
+                        android:id="@+id/tvActMovReaDetFecha"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2017-01-01"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Hora : "
+                        android:textSize="25sp"/>
+                    <TextView
+                        android:id="@+id/tvActMovReaDetHora"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="23:05"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Precio : "
+                        android:textColor="@color/black"
+                        android:textSize="25sp"/>
+                    <TextView
+                        android:id="@+id/tvActMovReaDetPrecio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20.5"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cantidad : "
+                        android:textColor="@color/black"
+                        android:textSize="25sp"/>
+                    <TextView
+                        android:id="@+id/tvActMovReaDetCant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/rojoFuerte"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvActMovReaDetClieProv"
+                            android:layout_width="match_parent"
+                            android:layout_height="65sp"
+                            android:hint="Proveedor"
+                            android:textColor="@color/black"
+                            android:background="@color/amverSuave"
+                            android:clickable="true"
+                            android:onClick="ClickMovimientosRealizadosDetalleCliente"
+                            android:textSize="25sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvActMovReaDetMovimiento"
+                            android:layout_width="match_parent"
+                            android:layout_height="65sp"
+                            android:textColor="@color/black"
+                            android:enabled="false"
+                            android:hint="Movimiento"
+                            android:background="@color/amverSuave"
+                            android:textSize="25sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvActMovReaDetObservacion"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:textColor="@color/black"
+                            android:hint="Observacion"
+                            android:background="@color/amverSuave"
+                            android:textSize="25sp"
+                            android:gravity="start" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

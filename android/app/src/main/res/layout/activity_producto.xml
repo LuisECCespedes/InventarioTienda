@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.luis.tiendacontrol.mantenimiento.ProductoActivity">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabActProdNuevo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:onClick="clickButtonProducto"
+        app:srcCompat="@android:drawable/ic_input_add"
+        tools:layout_editor_absoluteX="355dp"
+        tools:layout_editor_absoluteY="547dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/llCabecera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/rojoFuerte"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/amarilloSuave">
+
+                <TextView
+                    android:id="@+id/tvActProdManMarca"
+                    style="@style/botonGeneralSinMargen"
+                    android:text="Marca :TODOS"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:textSize="25sp"
+                    android:onClick="clickProductoMantenimientoMarca"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/amarilloSuave">
+
+                <TextView
+                    android:id="@+id/tvActProdManTipo"
+                    style="@style/botonGeneralSinMargen"
+                    android:text="Tipo :TODOS"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:textSize="25sp"
+                    android:onClick="clickProductoMantenimientoTipo"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/gvActProducto"
+            android:layout_width="match_parent"
+            android:layout_height="805dp"
+            android:layout_marginTop="1dp"
+            android:numColumns="1"
+            android:divider="@color/verdeBajoFuerte"
+            android:dividerHeight="0.4dp"
+            android:listSelector="@color/amarilloSuave"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llCabecera" />
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

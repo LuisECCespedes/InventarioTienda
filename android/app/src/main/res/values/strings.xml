@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Control Productos</string>
+    <string name="password">Contraseña</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="cerrarSession">Cerrar Sessión</string>
+    <string name="ingreso">Ingreso</string>
+    <string name="salida">Salida</string>
+    <string name="cliente">Cliente</string>
+    <string name="proveedor">Proveedor</string>
+    <string name="backup">Backup</string>
+    <string name="restore">Restore</string>
+
+</resources>
