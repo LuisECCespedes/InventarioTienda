@@ -155,7 +155,8 @@ public class TipoMovimientoDetalleActivity extends AppCompatActivity implements 
         Intent intento = new Intent(getApplicationContext(), TipoMovimientoActivity.class);
         intento.putExtra("tipMov",vTipoMovimiento);
         //llamamos a la actividad
-        startActivity(intento);
+        intento.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         finish();
+        startActivity(intento);
     }
 }

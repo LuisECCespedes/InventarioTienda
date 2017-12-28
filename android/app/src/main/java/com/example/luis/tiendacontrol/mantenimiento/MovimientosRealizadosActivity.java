@@ -182,13 +182,8 @@ public class MovimientosRealizadosActivity extends AppCompatActivity {
         cambiarAct.putExtra("objKardex",objKardex);
         cambiarAct.putExtra("fechaDesde",fechaDesde);
         cambiarAct.putExtra("fechaHasta",fechaHasta);
-/*
-        if (actividad.equals(MovimientosRealizadosDetalleActivity.class)) {
-            Cliente objCliente = (Cliente) Select.BuscaRegistro(getApplicationContext(),objKardex.getClie_nombre(), ClienteTabla.TABLA);
-            cambiarAct.putExtra("objCliente",objCliente);
-            Producto objProducto = (Producto) Select.BuscaRegistro(getApplicationContext(),objKardex.getProd_id(), KardexTabla.TABLA);
-            cambiarAct.putExtra("objProducto",objProducto);
-        }*/
+        cambiarAct.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        finish();
         startActivity(cambiarAct);
     }
 }

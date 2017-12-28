@@ -122,11 +122,16 @@ public class MarcaDetalleActivity extends AppCompatActivity implements View.OnCl
     }
 
     void Salir()
-    {
-        // Salir de Cliente
+    {   // Salir de Marca
         Intent intento = new Intent(getApplicationContext(), MarcaActivity.class);
         //llamamos a la actividad
-        startActivity(intento);
+        intento.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         finish();
+        startActivity(intento);
+    }
+
+    @Override
+    public void onBackPressed() {
+        Salir();
     }
 }

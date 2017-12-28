@@ -14,6 +14,7 @@ import com.example.luis.tiendacontrol.data.modelo.Kardex;
 import com.example.luis.tiendacontrol.data.modelo.Marca;
 import com.example.luis.tiendacontrol.data.modelo.Producto;
 import com.example.luis.tiendacontrol.data.modelo.Tipo;
+import com.example.luis.tiendacontrol.data.util.Mensaje;
 import com.example.luis.tiendacontrol.esquemaSqlLite.crud.Select;
 import com.example.luis.tiendacontrol.esquemaSqlLite.tablas.MarcaTabla;
 import com.example.luis.tiendacontrol.esquemaSqlLite.tablas.TipoTabla;
@@ -85,9 +86,9 @@ public class ProductoMovimientoDetalleActivity extends AppCompatActivity {
         {
             objProducto = (Producto) getIntent().getSerializableExtra("objProducto");
         }
-        Marca itemMarca = (Marca)Select.BuscaRegistro(getApplicationContext(),objProducto.getProd_id(), MarcaTabla.TABLA);
+        Marca itemMarca = (Marca)Select.BuscaRegistro(getApplicationContext(),objProducto.getMar_id(), MarcaTabla.TABLA);
         tvmarca.setText(itemMarca.getMar_descri());
-        Tipo itemTipo = (Tipo)Select.BuscaRegistro(getApplicationContext(),objProducto.getProd_id(), TipoTabla.TABLA);
+        Tipo itemTipo = (Tipo)Select.BuscaRegistro(getApplicationContext(),objProducto.getTip_id(), TipoTabla.TABLA);
         tvtipo.setText(itemTipo.getTip_descri());
         tvnombre.setText(objProducto.getProd_descri());
         tvprecio.setText(objProducto.getProd_precio()+"");
@@ -109,6 +110,8 @@ public class ProductoMovimientoDetalleActivity extends AppCompatActivity {
         actividad.putExtra("objInventario",objInventario);
         actividad.putExtra("fechaDesde",fechaDesde);
         actividad.putExtra("fechaHasta",fechaHasta);
+        actividad.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        finish();
         startActivity(actividad);
     }
 }

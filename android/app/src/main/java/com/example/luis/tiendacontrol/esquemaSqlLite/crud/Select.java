@@ -132,7 +132,6 @@ public class Select {
     public static Object BuscaRegistro(Context context,String codigo,String cTabla)
     {
         Object objCarga = null;
-
         con = new ConexionSqliteHelper(context);
         db = con.getReadableDatabase();
 

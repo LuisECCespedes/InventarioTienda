@@ -60,6 +60,8 @@ public class MarcaActivity extends AppCompatActivity {
         // Nuevo Cliente
         Intent intento = new Intent(getApplicationContext(), MarcaDetalleActivity.class);
         //llamamos a la actividad
+        intento.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        finish();
         startActivity(intento);
     }
 
@@ -68,8 +70,9 @@ public class MarcaActivity extends AppCompatActivity {
         // Salir
         Intent intento = new Intent(getApplicationContext(), MenuActivity.class);
         //llamamos a la actividad
-        startActivity(intento);
+        intento.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         finish();
+        startActivity(intento);
     }
     public void enviarActivity()
     {
@@ -78,6 +81,8 @@ public class MarcaActivity extends AppCompatActivity {
             Intent intento = new Intent(getApplicationContext(), MarcaDetalleActivity.class);
             intento.putExtra("objMarca", objMarca);
             //llamamos a la actividad
+            intento.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+            finish();
             startActivity(intento);
         }
     }

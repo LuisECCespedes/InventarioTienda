@@ -62,6 +62,8 @@ public class TipoActivity extends AppCompatActivity {
         // Nuevo Cliente
         Intent intento = new Intent(getApplicationContext(), TipoDetalleActivity.class);
         //llamamos a la actividad
+        intento.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        finish();
         startActivity(intento);
     }
 
@@ -70,16 +72,20 @@ public class TipoActivity extends AppCompatActivity {
         // Salir
         Intent intento = new Intent(getApplicationContext(), MenuActivity.class);
         //llamamos a la actividad
-        startActivity(intento);
+        intento.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         finish();
+        startActivity(intento);
     }
     public void enviarActivity()
     {
-        if (!objTipo.getTip_id().equals("1")) {
-                Intent intento = new Intent(getApplicationContext(), TipoDetalleActivity.class);
-                intento.putExtra("objTipo", objTipo);
-                //llamamos a la actividad
-                startActivity(intento);
-            }
+        if (!objTipo.getTip_id().equals("1"))
+        {
+            Intent intento = new Intent(getApplicationContext(), TipoDetalleActivity.class);
+            intento.putExtra("objTipo", objTipo);
+            //llamamos a la actividad
+            intento.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+            finish();
+            startActivity(intento);
+        }
     }
 }

@@ -71,8 +71,9 @@ public class ProductoInventarioActivity extends AppCompatActivity {
                 intentoInv.putExtra("objMarca",objMarca);
                 intentoInv.putExtra("objTipo",objTipo);
                 intentoInv.putExtra("objInventario",objInventario);
-                startActivity(intentoInv);
+                intentoInv.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
                 finish();
+                startActivity(intentoInv);
             }
         });
     }
@@ -82,26 +83,16 @@ public class ProductoInventarioActivity extends AppCompatActivity {
         adaptador = new InventarioGridAdapter(getApplicationContext(), 0, listInventario);
         gvProducto.setAdapter(adaptador);
     }
-/*
-    public void clickButtonProducto(View view)
-    {
-        Intent intProducto = new Intent(getApplicationContext(),ProductoDetalleActivity.class);
-        intProducto.putExtra("objMarca",objMarca);
-        intProducto.putExtra("objTipo",objTipo);
-        intProducto.putExtra("objProducto",new Producto("0","",0.0,objMarca.getMar_id(),objTipo.getTip_id(),""));
-        startActivity(intProducto);
-        finish();
-    }*/
 
-    //@OnClick(R.id.btActProInvMarca)
     public void clickProductoInventarioMarca(View view)
     {
         Intent intMarca = new Intent(getApplicationContext(),MarcaSelectActivity.class);
         intMarca.putExtra("objMarca",objMarca);
         intMarca.putExtra("objTipo",objTipo);
         intMarca.putExtra("actividad","ProductoInventario");
-        startActivity(intMarca);
+        intMarca.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         finish();
+        startActivity(intMarca);
     }
 
     //@OnClick(R.id.btActProInvTipo)
@@ -111,14 +102,16 @@ public class ProductoInventarioActivity extends AppCompatActivity {
         intTipo.putExtra("objTipo",objTipo);
         intTipo.putExtra("objMarca",objMarca);
         intTipo.putExtra("actividad","ProductoInventario");
-        startActivity(intTipo);
+        intTipo.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         finish();
+        startActivity(intTipo);
     }
 
     @Override
     public void onBackPressed() {
         Intent intTipo = new Intent(getApplicationContext(),MenuActivity.class);
-        startActivity(intTipo);
+        intTipo.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         finish();
+        startActivity(intTipo);
     }
 }

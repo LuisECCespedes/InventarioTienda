@@ -59,7 +59,6 @@ public class MenuActivity extends AppCompatActivity {
     private MenuGridAdapter adaptador;
     private List<String> listaItemMenu= new ArrayList<>();
 
-    String item="TipoMovimiento";
     @BindView(R.id.lvActMenu)
     ListView listMenu;
 
@@ -71,7 +70,7 @@ public class MenuActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         listaItemMenu.add("Tipo Movimiento");       listaItemMenu.add("Marca Producto");        listaItemMenu.add("Tipo Producto");         listaItemMenu.add("Producto");
         listaItemMenu.add("Cliente/Proveedor");     listaItemMenu.add("Inventario");            listaItemMenu.add("Movimientos Realizados");
-        //ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, menu);
+
         adaptador = new MenuGridAdapter(getApplicationContext(), 0, listaItemMenu);
         listMenu.setAdapter(adaptador);
 
@@ -114,6 +113,8 @@ public class MenuActivity extends AppCompatActivity {
                         intentoActivity.putExtra("objTipo",new Tipo("1","Todos"));
                         break;
                 }
+                intentoActivity.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                finish();
                 startActivity(intentoActivity);
             }
         });
@@ -155,12 +156,12 @@ public class MenuActivity extends AppCompatActivity {
         }
     }
 
-    private void Backup() {
+    private void Backup()
+    {
         Select.Backup(getApplicationContext());
     }
 
     private void Restore() {
-        //Mensaje.mensajeToas(MenuActivity.this,"A");
 
         try {
             String nombre = "tienda.txt";
@@ -192,8 +193,8 @@ public class MenuActivity extends AppCompatActivity {
         SessionPreferences.get(MenuActivity.this).Session(false);
         Intent intentoCerrar = new Intent(MenuActivity.this,LoginActivity.class);
         intentoCerrar.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-        startActivity(intentoCerrar);
         finish();
+        startActivity(intentoCerrar);
     }
     //endregion
 }

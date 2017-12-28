@@ -122,10 +122,9 @@ public class ClienteSelectActivity extends AppCompatActivity {
         intento.putExtra("objTipoMovimiento",objTipoMovimiento);
         intento.putExtra("objProducto",objProducto);
         intento.putExtra("cantidad",vcant);
-        startActivity(intento);
-        //llamamos a la actividad
-        startActivity(intento);
+        intento.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         finish();
+        startActivity(intento);
     }
 
     @Override

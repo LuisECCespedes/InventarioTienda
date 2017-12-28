@@ -144,8 +144,9 @@ public class ProductoInventarioRegistroActivity extends AppCompatActivity {
             intento.putExtra("objTipoMovimiento",objTipoMovimiento);
             objProducto.setProd_precio(Double.parseDouble(new DecimalFormat("#.00").format(Double.parseDouble(tvPrecio.getText().toString())).replace(",",".")));
         }
-        startActivity(intento);
+        intento.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         finish();
+        startActivity(intento);
     }
 
     @Override

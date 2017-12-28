@@ -124,7 +124,8 @@ public class TipoDetalleActivity extends AppCompatActivity implements View.OnCli
         // Salir de Cliente
         Intent intento = new Intent(getApplicationContext(), TipoActivity.class);
         //llamamos a la actividad
-        startActivity(intento);
+        intento.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         finish();
+        startActivity(intento);
     }
 }

@@ -74,8 +74,9 @@ public class ProductoActivity extends AppCompatActivity{
                 intProducto.putExtra("objMarca",objMarca);
                 intProducto.putExtra("objTipo",objTipo);
                 intProducto.putExtra("bnuevo",false);
-                startActivity(intProducto);
+                intProducto.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
                 finish();
+                startActivity(intProducto);
             }
         });
         cargarProductos();
@@ -93,8 +94,9 @@ public class ProductoActivity extends AppCompatActivity{
         intProducto.putExtra("objMarca",objMarca);
         intProducto.putExtra("objTipo",objTipo);
         intProducto.putExtra("objProducto",new Producto("0","",0.0,objMarca.getMar_id(),objTipo.getTip_id(),""));
-        startActivity(intProducto);
+        intProducto.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         finish();
+        startActivity(intProducto);
     }
 
     //@OnClick(R.id.btActProMarca)
@@ -104,11 +106,11 @@ public class ProductoActivity extends AppCompatActivity{
         intMarca.putExtra("objMarca",objMarca);
         intMarca.putExtra("objTipo",objTipo);
         intMarca.putExtra("actividad","Producto");
-        startActivity(intMarca);
+        intMarca.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         finish();
+        startActivity(intMarca);
     }
 
-    //@OnClick(R.id.btActProTipo)
     public void clickProductoMantenimientoTipo(View view)
     {
         Intent intTipo = new Intent(getApplicationContext(),TipoSelectActivity.class);
@@ -122,7 +124,8 @@ public class ProductoActivity extends AppCompatActivity{
     @Override
     public void onBackPressed() {
         Intent intTipo = new Intent(getApplicationContext(),MenuActivity.class);
-        startActivity(intTipo);
+        intTipo.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         finish();
+        startActivity(intTipo);
     }
 }

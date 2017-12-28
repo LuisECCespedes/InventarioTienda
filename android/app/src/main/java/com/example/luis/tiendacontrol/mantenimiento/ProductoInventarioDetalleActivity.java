@@ -79,8 +79,9 @@ public class ProductoInventarioDetalleActivity extends AppCompatActivity {
                 envio.putExtra("objProducto",objProducto);
                 envio.putExtra("objCliente",(Cliente)Select.BuscaRegistro(getApplicationContext(),"1", ClienteTabla.TABLA));
                 envio.putExtra("objTipoMovimiento",(TipoMovimiento)Select.BuscaRegistro(getApplicationContext(),"2", TipoMovimientoTabla.TABLA));
-                startActivity(envio);
+                envio.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
                 finish();
+                startActivity(envio);
             }
         });
 
@@ -100,7 +101,8 @@ public class ProductoInventarioDetalleActivity extends AppCompatActivity {
     {   Intent retorno = new Intent(getApplicationContext(),ProductoInventarioActivity.class);
         retorno.putExtra("objMarca",objMarca);
         retorno.putExtra("objTipo",objTipo);
-        startActivity(retorno);
+        retorno.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         finish();
+        startActivity(retorno);
     }
 }

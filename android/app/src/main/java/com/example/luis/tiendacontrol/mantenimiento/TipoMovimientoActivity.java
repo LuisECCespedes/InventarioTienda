@@ -79,8 +79,9 @@ public class TipoMovimientoActivity extends AppCompatActivity {
         // Salir de tipo movimiento
         Intent intento = new Intent(getApplicationContext(), MenuActivity.class);
         //llamamos a la actividad
-        startActivity(intento);
+        intento.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         finish();
+        startActivity(intento);
     }
     public void onRadioIngresoSalidaPrincipal(View view)
     {
@@ -105,6 +106,8 @@ public class TipoMovimientoActivity extends AppCompatActivity {
         Intent intento = new Intent(getApplicationContext(), TipoMovimientoDetalleActivity.class);
         intento.putExtra("tipMov",rbIngreso.isChecked()?"I":"S");
         //llamamos a la actividad
+        intento.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        finish();
         startActivity(intento);
     }
 }

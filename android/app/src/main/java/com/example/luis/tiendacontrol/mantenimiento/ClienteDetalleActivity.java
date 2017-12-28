@@ -129,8 +129,6 @@ public class ClienteDetalleActivity extends AppCompatActivity implements View.On
             @Override
             public void onClick(DialogInterface dialog, int seleccion) {
                 if (options[seleccion] == "Elegir de Galeria") {
-                    //Intent intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-
                     Intent selectImagen = new Intent(Intent.ACTION_PICK,  android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                     selectImagen.setType("image/*");
                     startActivityForResult(Intent.createChooser(selectImagen,"Seleciona app de imagen"),SELECT_PICTURE);
@@ -273,7 +271,13 @@ public class ClienteDetalleActivity extends AppCompatActivity implements View.On
         Intent intento = new Intent(getApplicationContext(), ClienteActivity.class);
         intento.putExtra("cliente",vcliente);
         //llamamos a la actividad
-        startActivity(intento);
+        intento.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         finish();
+        startActivity(intento);
+    }
+
+    @Override
+    public void onBackPressed() {
+        Salir();
     }
 }

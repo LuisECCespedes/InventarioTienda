@@ -19,8 +19,6 @@ public class LoginActivity extends AppCompatActivity {
     @BindView(R.id.etActLogCon)
     TextView pass;
 
-    @BindView(R.id.btnActLogIng)
-    Button btnACeptar;
     Boolean ok ;
 
     @Override
@@ -30,8 +28,7 @@ public class LoginActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick(R.id.btnActLogIng)
-    public void clickBtn(View view)
+    public void clickLogin(View view)
     {
         ok = true;
         if (pass.getText().toString().toLowerCase().equals("5847"))
@@ -56,8 +53,9 @@ public class LoginActivity extends AppCompatActivity {
                 Mensaje.mensajeToas(LoginActivity.this,"Bienvenida Cristina");
                 SessionPreferences.get(LoginActivity.this).Session(true);
                 Intent intentoLista = new Intent(LoginActivity.this,MenuActivity.class);
-                startActivity(intentoLista);
+                intentoLista.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
                 finish();
+                startActivity(intentoLista);
             }else{
                 Mensaje.mensajeToas(LoginActivity.this,"Contraseña incorrecta");
             }

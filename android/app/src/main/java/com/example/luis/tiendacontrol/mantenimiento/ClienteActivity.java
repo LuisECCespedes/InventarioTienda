@@ -35,8 +35,6 @@ public class ClienteActivity extends AppCompatActivity {
     private List<Cliente> listaCliente= new ArrayList<>();;
     private Cliente objCliente;
 
-    private boolean bCliente;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,6 +61,8 @@ public class ClienteActivity extends AppCompatActivity {
                     intento.putExtra("objCliente",objCliente);
                     intento.putExtra("cliente",rbCliente.isChecked() ? "C" : "P");
                     //llamamos a la actividad
+                    intento.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                    finish();
                     startActivity(intento);
                 }
             }
@@ -99,6 +99,8 @@ public class ClienteActivity extends AppCompatActivity {
         Intent intento = new Intent(ClienteActivity.this, ClienteDetalleActivity.class);
         intento.putExtra("cliente",rbCliente.isChecked() ? "C" : "P");
         //llamamos a la actividad
+        intento.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        finish();
         startActivity(intento);
     }
 
@@ -107,7 +109,8 @@ public class ClienteActivity extends AppCompatActivity {
         // Salir de Cliente
         Intent intento = new Intent(ClienteActivity.this, MenuActivity.class);
         //llamamos a la actividad
-        startActivity(intento);
+        intento.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         finish();
+        startActivity(intento);
     }
 }

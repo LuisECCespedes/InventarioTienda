@@ -300,6 +300,8 @@ public class ProductoDetalleActivity extends AppCompatActivity implements View.O
         Intent intentoActivity = new Intent(getApplicationContext(),ProductoActivity.class);
         intentoActivity.putExtra("objMarca",objMarca);
         intentoActivity.putExtra("objTipo",objTipo);
+        intentoActivity.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        finish();
         startActivity(intentoActivity);
 
     }
@@ -321,7 +323,8 @@ public class ProductoDetalleActivity extends AppCompatActivity implements View.O
         intTipo.putExtra("actividad","ProductoDetalle");
         objProducto = new Producto(objProducto.getProd_id(),etNombre.getText().toString(),Double.parseDouble(etPrecio.getText().toString()),objMarcaDetalle.getMar_id(),objTipoDetalle.getTip_id(),pathUri);
         intTipo.putExtra("objProducto",objProducto);
-        startActivity(intTipo);
+        intTipo.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         finish();
+        startActivity(intTipo);
     }
 }

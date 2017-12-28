@@ -82,8 +82,9 @@ public class MovimientosActivity extends AppCompatActivity {
             intentoInv.putExtra("objMarca",objMarca);
             intentoInv.putExtra("objTipo",objTipo);
             intentoInv.putExtra("objInventario",objInventario);
-            startActivity(intentoInv);
+            intentoInv.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
             finish();
+            startActivity(intentoInv);
         }
     });
 
@@ -101,8 +102,9 @@ public class MovimientosActivity extends AppCompatActivity {
         intMarca.putExtra("objMarca",objMarca);
         intMarca.putExtra("objTipo",objTipo);
         intMarca.putExtra("actividad","Movimientos");
-        startActivity(intMarca);
+        intMarca.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         finish();
+        startActivity(intMarca);
     }
 
     //@OnClick(R.id.btActProInvTipo)
@@ -112,13 +114,15 @@ public class MovimientosActivity extends AppCompatActivity {
         intTipo.putExtra("objTipo",objTipo);
         intTipo.putExtra("objMarca",objMarca);
         intTipo.putExtra("actividad","Movimientos");
-        startActivity(intTipo);
+        intTipo.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         finish();
+        startActivity(intTipo);
     }
     @Override
     public void onBackPressed() {
-        Intent intSalir = new Intent(getApplicationContext(), MenuActivity.class);
-        startActivity(intSalir);
+        Intent intTipo = new Intent(getApplicationContext(), MenuActivity.class);
+        intTipo.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         finish();
+        startActivity(intTipo);
     }
 }

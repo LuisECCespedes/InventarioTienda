@@ -99,6 +99,8 @@ public class MarcaSelectActivity extends AppCompatActivity {
         // Nuevo Cliente
         Intent intento = new Intent(getApplicationContext(), MarcaDetalleActivity.class);
         //llamamos a la actividad
+        intento.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        finish();
         startActivity(intento);
     }
 
@@ -120,7 +122,8 @@ public class MarcaSelectActivity extends AppCompatActivity {
         intento.putExtra("objMarcaDetalle", objMarcaDetalle);
         if (bProducto) intento.putExtra("objProducto", objProducto);
         //llamamos a la actividad
+        intento.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        finish();
         startActivity(intento);
-
     }
 }

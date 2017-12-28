@@ -127,6 +127,8 @@ public class MovimientosRealizadosDetalleActivity extends AppCompatActivity {
         actividad.putExtra("objInventario",objInventario);
         actividad.putExtra("fechaDesde",fechaDesde);
         actividad.putExtra("fechaHasta",fechaHasta);
+        actividad.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        finish();
         startActivity(actividad);
     }
 

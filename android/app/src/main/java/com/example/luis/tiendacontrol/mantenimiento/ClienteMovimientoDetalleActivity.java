@@ -101,10 +101,7 @@ public class ClienteMovimientoDetalleActivity extends AppCompatActivity {
             imagen.setImageURI(Uri.parse(objCliente.getClie_rut_foto()));
         }
     }
-    public void ClienteMovimientoDetalleLLamar(View view)
-    {
-        Mensaje.mensajeToas(getApplicationContext(),"llamar" + objCliente.getClie_num_tel());
-    }
+
     @Override
     public void onBackPressed() {
         Intent actividad = new Intent(getApplicationContext(),MovimientosRealizadosDetalleActivity.class);
@@ -116,6 +113,8 @@ public class ClienteMovimientoDetalleActivity extends AppCompatActivity {
         actividad.putExtra("objInventario",objInventario);
         actividad.putExtra("fechaDesde",fechaDesde);
         actividad.putExtra("fechaHasta",fechaHasta);
+        actividad.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        finish();
         startActivity(actividad);
     }
 }
